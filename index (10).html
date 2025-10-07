@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💗 1st Anniversary 💗</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffcce0, #ffe6f0);
+      color: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .container {
+      width: 80%;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 25px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 40px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .slide {
+      display: none;
+      animation: fadeIn 1s;
+    }
+    .active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+      color: #ff66a3;
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #555;
+      text-align: justify;
+    }
+    .next-btn {
+      margin-top: 25px;
+      background-color: #ff99c8;
+      color: white;
+      border: none;
+      border-radius: 15px;
+      padding: 10px 25px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: background 0.3s;
+    }
+    .next-btn:hover {
+      background-color: #ff6fa8;
+    }
+    .heart {
+      font-size: 25px;
+      color: #ff99c8;
+      margin-top: 15px;
+      animation: heartbeat 1.5s infinite;
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }/* Animasi hati dan confetti */
+.heart-float, .confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+.heart-float span, .confetti span {
+  position: absolute;
+  display: block;
+  opacity: 0.85;
+  animation: fall 8s linear infinite;
+}
+.heart-float span {
+  color: #ff80b3;
+  font-size: 18px;
+}
+.confetti span {
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle at center, #ffb6c1 30%, #fff 70%);
+  border-radius: 50%;
+  opacity: 0.8;
+}
+@keyframes fall {
+  0% { transform: translateY(-10%) rotate(0deg); opacity: 0.9; }
+  100% { transform: translateY(110%) rotate(360deg); opacity: 0.2; }
+}
+
+  </style>
+</head>
+<body>
+  <div class="heart-float" id="hearts"></div>
+  <div class="confetti" id="confetti"></div>  <div class="container"><div class="slide active" id="slide1">
+  <h1>🌸 Halaman 1 — Untuk Kamu yang Aku Cintai 🌸</h1>
+  <p>Sayangku, hari ini aku cuma mau bilang kalau satu tahun ini bener-bener berarti buat aku. Kamu bukan cuma pasangan, tapi juga sahabat, tempat aku bersandar, tempat aku belajar memahami arti cinta yang sesungguhnya. Aku minta maaf ya kalau aku sering nurutin ego, sering bikin kamu capek, tapi aku janji akan terus belajar jadi lebih baik buat kamu. Kamu tuh bagian terindah yang pernah aku punya, dan aku nggak akan pernah berhenti nyayangin kamu.</p>
+  <button class="next-btn" onclick="nextSlide(2)">Next ➜</button>
+</div>
+
+<div class="slide" id="slide2">
+  <h1>🧸 Halaman 2 — Terima Kasih untuk Segalanya 🧸</h1>
+  <p>Terima kasih udah sabar sama aku, udah bertahan, udah tetap milih aku meski aku punya banyak kurangnya. Kamu tuh rumah paling hangat yang pernah aku temuin, tempat aku bisa jadi diri sendiri tanpa harus takut. Aku bersyukur banget punya kamu, dan aku janji bakal jagain hubungan ini sebaik mungkin. Maaf juga ya kalau aku kadang keras kepala, tapi semua itu karena aku sayang banget sama kamu.</p>
+  <button class="next-btn" onclick="nextSlide(3)">Next ➜</button>
+</div>
+
+<div class="slide" id="slide3">
+  <h1>🌷 Halaman 3 — Tentang Kita 🌷</h1>
+  <p>Aku pengen kita terus tumbuh bareng, saling ngerti, saling jaga. Aku pengen kita nggak cuma jadi pasangan, tapi juga jadi tim yang saling dukung dalam segala hal. Aku pengen kamu tau, bahwa kamu itu bukan cuma cinta, tapi juga semangat hidup aku. Setiap tawa kamu, setiap pelukan kamu, semuanya bikin aku ngerasa lebih hidup.</p>
+  <button class="next-btn" onclick="nextSlide(4)">Next ➜</button>
+</div>
+
+<div class="slide" id="slide4">
+  <h1>💞 Halaman 4 — Doa dan Harapan 💞</h1>
+  <p>Semoga hubungan ini terus langgeng ya sayang. Aku pengen kita bisa terus ngerayain hari-hari kayak gini, bukan cuma setahun, tapi bertahun-tahun ke depan. Aku pengen lihat kamu bahagia, lihat kamu tumbuh, dan aku pengen terus jadi bagian dari kebahagiaan itu. Aku sayang kamu lebih dari yang bisa dijelasin kata-kata. Kamu rumahku, bahagiaku, segalanya.</p>
+  <button class="next-btn" onclick="nextSlide(5)">Next ➜</button>
+</div>
+
+<div class="slide" id="slide5">
+  <h1>💗 Halaman 5 — Selamat Ulang Tahun Cinta Kita 💗</h1>
+  <p>Happy 1st Anniversary, cinta. Terima kasih udah jadi orang yang selalu ngertiin aku, yang mau sabar di setiap kondisi. Aku tau perjalanan ini nggak selalu mudah, tapi aku yakin kita bisa terus kuat karena kita saling punya. I love you endlessly, sayang. Dari awal aku milih kamu, sampai nanti kapan pun, hatiku tetap buat kamu aja. 💖</p>
+  <div class="heart">❤️</div>
+</div>
+
+  </div>  <script>
+    let currentSlide = 1;
+    function nextSlide(n) {
+      document.getElementById('slide' + currentSlide).classList.remove('active');
+      currentSlide = n;
+      document.getElementById('slide' + currentSlide).classList.add('active');
+    }
+
+    // Hati dan confetti random
+    function createFloatingElements(container, content, count, isHeart) {
+      for (let i = 0; i < count; i++) {
+        let span = document.createElement('span');
+        span.innerHTML = content;
+        span.style.left = Math.random() * 100 + '%';
+        span.style.animationDelay = Math.random() * 5 + 's';
+        if (isHeart) {
+          span.style.fontSize = (Math.random() * 10 + 10) + 'px';
+        } else {
+          span.style.width = (Math.random() * 8 + 6) + 'px';
+          span.style.height = span.style.width;
+        }
+        container.appendChild(span);
+      }
+    }
+    createFloatingElements(document.getElementById('hearts'), '❤️', 15, true);
+    createFloatingElements(document.getElementById('confetti'), '', 35, false);
+  </script></body>
+</html>
